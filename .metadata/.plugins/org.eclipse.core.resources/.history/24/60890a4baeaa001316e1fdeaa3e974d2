@@ -1,0 +1,106 @@
+import java.io.*;
+import java.util.*;
+
+public class P1 {
+
+	
+	private static Scanner input = new Scanner(System.in);
+	public static void main(String[] args) {
+
+		int option;
+		int i;
+		
+		System.out.println("1 . prob 1 \n2. Prob 2 \n3. prob 3 \n4. prob 4\n5. prob 5\n 0. To Exit");
+		
+
+		while ( true ) {
+
+			i = input.nextInt();
+            if(i == -1 )
+            	 break;
+            
+			switch (i) {
+
+			case 1:
+				prob1();
+				break;
+			case 2:
+				prob2();
+				break;
+			case 3:
+				prob3();
+				break;
+			case 4:
+				prob4();
+				break;
+			case 5:
+				prob5();
+				break;
+
+			}
+
+		}
+	}
+
+	private static void prob5() {
+		// TODO Auto-generated method stub
+
+	}
+
+	private static void prob4() {
+		// TODO Auto-generated method stub
+
+	}
+
+	private static void prob3() {
+		// TODO Auto-generated method stub
+
+	}
+
+	private static void prob2() {
+		// TODO Auto-generated method stub
+
+	}
+
+	private static void prob1() {
+		int temp ;
+		Vector<Integer> in =  new Vector<Integer>();
+		Vector<Integer> out =  new Vector<Integer>();
+		System.out.println("enter the integer  array  < -1 to teminate the input>");
+		
+		
+		//taking input 
+		while(true){
+			temp = input.nextInt();
+			if(temp == -1)
+				break;
+			in.add(temp);
+		}
+		
+		System.out.println("enter the index to rotate around");
+		temp = input.nextInt();
+	
+		
+		//  doing the rotation
+		
+		if(temp >= in.size()){
+			System.out.println("the index is out of array bound");
+		}else{
+			
+			for(int j = 0 ; j < in.size() ; j ++){
+				
+				out.add(in.get(  (temp + j ) %  in.size() ) );
+				
+				
+			}
+			
+				
+		}
+			
+		
+		//printing the output
+		
+		System.out.println("after rotation >> " + out);
+		
+	}
+}
